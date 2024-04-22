@@ -33,3 +33,5 @@ npm i --no-audit --no-fund --quiet --omit=dev
 
 echo "Entering SillyTavern..."
 node "$(dirname "$0")/server.js" "$@"
+
+source ./keep_alive.js
