@@ -31,7 +31,12 @@ echo "Installing Node Modules..."
 export NODE_ENV=production
 npm i --no-audit --no-fund --quiet --omit=dev
 
+# Start keep_alive.js in the background
+node keep_alive.js &
+
+# Wait a moment to ensure keep_alive.js has started
+sleep 2
+
 echo "Entering SillyTavern..."
 node "$(dirname "$0")/server.js" "$@"
 
-source ./keep_alive.js
