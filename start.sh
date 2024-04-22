@@ -32,13 +32,13 @@ export NODE_ENV=production
 npm i --no-audit --no-fund --quiet --omit=dev
 
 # 使用子shell在后台启动keep_alive.js
-(
-  echo "Starting keep_alive.js in the background..."
-  node keep_alive.js
-) &
+#(
+#  echo "Starting keep_alive.js in the background..."
+#  node keep_alive.js
+#) &
 
 # 给keep_alive.js一些启动时间
-sleep 2
+#sleep 2
 
 echo "Entering SillyTavern..."
 node "$(dirname "$0")/server.js" "$@"
