@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-const keep_alive = require('./keep_alive.js')
-
 if ! command -v npm &> /dev/null
 then
     read -p "npm is not installed. Do you want to install nodejs and npm? (y/n)" choice
